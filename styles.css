@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav_logo img {
+    width: 80px;
+}
+
+.nav_logo_text {
+    margin-left: -1.2rem;
+    font-size: 23px;
+}
+
+.nav_sections {
+    display: flex;
+    gap: 2rem;
+    padding: 0px 4em;
+}
+
+.nav_sections div {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nav_sections div a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav_sections div:hover {
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+/* INTRODUCTION SECTION */
+/* ///////////////////////////////// */
+.introduction_section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.introduction_section_text {
+    width: 60%;
+    padding-top: 9rem;
+    padding-left: 1rem;
+}
+
+.introduction_section_text_heading {
+    font-size: 35px;
+    color: rgb(60, 58, 58);
+    margin-bottom: 2rem;
+}
+
+.introduction_section_text_subheading {
+    font-size: 39px;
+    color: rgb(35, 38, 48);
+    margin-bottom: 2rem;
+}
+
+.introduction_section_text_description {
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.button {
+    width: 150px;
+    height: 60px;
+    background-color: #e84949;
+    border: 3px solid #e84949;
+    position: relative;
+    box-shadow: 5px 5px 10px rgb(174, 171, 171);
+    cursor: pointer;
+}
+
+.button_box_1 {
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    transition: 0.9s;
+
+}
+
+.button_text {
+    position: absolute;
+    color: black;
+    padding: 0.9rem 2.4rem;
+    font-size: 19px;
+    z-index: 1;
+    color: white;
+}
+
+.button:hover .button_box_1 {
+    width: 100%;
+}
+
+.button:hover .button_text {
+    color: black;
+}
+
+/* //////////////////////////// */
+.introduction_section_animation {
+    padding: 0 4rem;
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.engineer_image {
+    position: absolute;
+    top: -10rem;
+    left: 5rem;
+    padding: 2rem;
+    animation-name: engineer_image_animation;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes engineer_image_animation {
+    from {
+        transform: perspective(10px) translatez(-1px);
+        border: 0px solid white;
+    }
+
+    to {
+        transform: perspective(10px) translatez(1px);
+        filter: grayscale(1);
+        border: 1px solid grey;
+        box-shadow: 1px 1px 17px rgb(173, 168, 168),-1px -1px 17px rgb(173, 168, 168);
+    }
+
+}
+
+/* .introduction_section_animation_container div{
+    position: absolute;
+} */
